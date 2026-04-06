@@ -1,0 +1,263 @@
+/*CSS Documment*/
+@charset "UTF-8";
+
+/*Ajustes Generales*/
+
+@font-face {
+    font-family: "ClashDisplay-Extralight";
+    src: url(fonts/clash-display/clash-displat-extralight.ttf) format(truetype);
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Light";
+    src: url(fonts/clash-display/clash-display-light.ttf) format(truetype);
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Regular";
+    src: url(fonts/clash-display/clash-display-regular.ttf) format(truetype);
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Medium";
+    src: url(fonts/clash-display/clash-display-medium.ttf)format(truetype);
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Semibold";
+    src: url(fonts/clash-display/clash-display-semibold.ttf) format(truetype);
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Bold";
+    src: url(fonts/clash-display/clash-display-bold.ttf) format(truetype);
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Variable";
+    src: url(fonts/clash-display/clash-display-variable.ttf) format(truetype);
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Dx Lactos";
+    src: url(fonts/dxlactos-regular.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Ajustes especificos*/
+
+body {
+    background-color: #eaeaea;
+}
+
+.navbar {
+    width: 95%;
+    margin: 20px auto;
+    background-color: #a7fc00;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.navbar {
+    font-family: 'ClashDisplay-Regular', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero {
+    width: 95%;
+    margin: 40px auto;
+    padding: 60px;
+
+    background: linear-gradient(to bottom, #d9a7e0, #cfcfcf);
+    border-radius: 40px;
+    align-items: center;
+    gap: 40px;
+}
+
+h1 {
+    font-family: 'Dx Lactos', sans-serif;
+    font-size: 70px;
+    margin: 0;
+    color: #262223;
+}
+
+h2 {
+    font-family: 'ClashDisplay-Regular', sans-serif;
+    font-size: 40px;
+    margin: 10px 0 20px;
+    color: #262223;
+}
+
+.hero-text p {
+    font-size: 14px;
+    color: #262223;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+
+    border: 2px solid #262223;
+    border-radius: 30px;
+
+    text-decoration: none;
+    color: #262223;
+    font-family: 'ClashDisplay-Medium', sans-serif;
+    font-weight: 500;
+}
+
+.hero-img img {
+    width: 300px;
+}
+
+.bloque p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.info {
+    width: 95%;
+    margin: 40px auto;
+}
+
+.bloque {
+    padding: 40px;
+}
+
+.verde {
+    background-color: #a7fc00;
+}
+
+.lila {
+    background-color: #f0bdf3;
+}
+
+.azul {
+    background-color: #6e6eff;
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h3 {
+    font-size: 28px;
+    margin: 0;
+    font-family: 'ClashDisplay-Semibold', sans-serif;
+}
+
+.bloque p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bloque ul {
+    margin-top: 14px;
+    padding-left: 20px;
+}
+
+.sub p {
+    font-family: "Fira Code", monospace;
+    font-weight: 500;
+}
+
+.sub2 p {
+    font-family: "Fira Code", monospace;
+    font-weight: 500;
+}
+
+.sub3 p {
+    font-family: "Fira Code", monospace;
+    font-weight: 500;
+}
+
+.sub4 p {
+    font-family: "Fira Code", monospace;
+    font-weight: 500;
+}
+
+.mitrabajo {
+    font-family: 'ClashDisplay-Regular', sans-serif
+}
+
+.portfolio {
+    width: 95%;
+    margin: 60px auto;
+}
+
+.portfolio-info h2 {
+    font-size: 60px;
+    margin: 10px 0;
+    font-family: 'Dx Lactos', sans-serif;
+}
+
+.mitrabajo h4 {
+    font-size: 14px;
+    font-family: 'ClashDisplay-Regular', sans-serif
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #262223;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #262223;
+    font-family: 'ClashDisplay-Medium', sans-serif;
+}
+
+footer {
+    background: linear-gradient(to bottom, #a7fc00, #ffffff);
+    text-align: center;
+    margin-top: 100px;
+    line-height: 3;
+}
+
+.contacto h3 {
+    font-family: 'Dx Lactos';
+    font-size: 50px;
+}
+
+.contacto p {
+    font-size: 20px;
+    font-family: "Fira Code Medium", serif;
+    text-spacing-trim: 47px;
+}
+
+.contacto li {
+    text-decoration: none;
+}
