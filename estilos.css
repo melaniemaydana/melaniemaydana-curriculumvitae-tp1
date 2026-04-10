@@ -80,108 +80,179 @@ body {
     background-color: #eaeaea;
 }
 
+/* HEADER */
 .navbar {
-    width: 95%;
-    margin: 20px auto;
     background-color: #a7fc00;
+    border: 2px solid #262223;
+    padding: 12px 24px;
     border-radius: 25px;
+    margin-left: 2%;
+    margin-right: 2%;
+
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+
 }
 
-.navbar {
+/* LOGO */
+.logo img {
+    height: 50px;
+}
+
+/* MENÚ */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+/* LINKS */
+.menu a {
+    text-decoration: none;
+    color: #262223;
+    font-size: 18px;
     font-family: 'ClashDisplay-Regular', sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
 
-.hero {
-    width: 95%;
-    margin: 40px auto;
-    padding: 60px;
+.menu li:not(:last-child)::after {
+    content: "|";
+    margin-left: 25px;
+    color: #000;
+}
 
+/* HERO */
+.hero {
     background: linear-gradient(to bottom, #d9a7e0, #cfcfcf);
-    border-radius: 40px;
+    border-radius: 25px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
+    margin: 30px 2%;
+    max-width: 2000px;
+}
+
+/* TEXTO */
+.hero-text {
+    padding: 40px;
+    max-width: 600px;
 }
 
 h1 {
     font-family: 'Dx Lactos', sans-serif;
-    font-size: 70px;
+    font-size: 75px;
     margin: 0;
     color: #262223;
 }
 
 h2 {
     font-family: 'ClashDisplay-Regular', sans-serif;
-    font-size: 40px;
+    font-size: 50px;
     margin: 10px 0 20px;
     color: #262223;
 }
 
 .hero-text p {
-    font-size: 14px;
+    font-size: 20px;
     color: #262223;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
+/* BOTÓN */
 .boton {
     display: inline-block;
-    margin-top: 30px;
-    padding: 12px 25px;
-
-    border: 2px solid #262223;
-    border-radius: 30px;
-
+    padding: 10px 18px;
+    border: 1px solid #262223;
+    border-radius: 20px;
     text-decoration: none;
     color: #262223;
     font-family: 'ClashDisplay-Medium', sans-serif;
     font-weight: 500;
+    font-size: 20px;
 }
+
+/* IMAGEN */
 
 .hero-img img {
-    width: 300px;
+    width: 500px;
 }
 
-.bloque p {
-    font-size: 14px;
-    line-height: 1.5;
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-img img {
+        width: 80%;
+        max-width: 300px;
+    }
 }
+
+/* INFO */
 
 .info {
-    width: 95%;
-    margin: 40px auto;
+    width: 100%;
+    margin: 0;
 }
 
 .bloque {
-    padding: 40px;
+    padding: 50px 110px;
 }
 
+/* COLORES */
 .verde {
     background-color: #a7fc00;
+    border-top-style: solid;
+    border-color: #262223;
+    border-top-width: 2px;
 }
 
 .lila {
     background-color: #f0bdf3;
+    border-top-style: solid;
+    border-color: #262223;
+    border-top-width: 2px;
 }
 
 .azul {
     background-color: #6e6eff;
+    border-top-style: solid;
+    border-color: #262223;
+    border-top-width: 2px;
+    border-bottom-style: solid;
+    border-color: #262223;
+    border-bottom-width: 2px;
 }
 
-.header {
+/* TITULOS */
+.header h3 {
     justify-content: space-between;
     align-items: center;
-}
-
-.header h3 {
     font-size: 28px;
-    margin: 0;
+    margin-bottom: 50px;
     font-family: 'ClashDisplay-Semibold', sans-serif;
 }
 
+/* TEXTOS */
 .bloque p {
     font-size: 14px;
     line-height: 1.5;
+    max-width: 800px;
 }
 
 .bloque ul {
@@ -209,55 +280,235 @@ h2 {
     font-weight: 500;
 }
 
-.mitrabajo {
-    font-family: 'ClashDisplay-Regular', sans-serif
-}
 
-.portfolio {
-    width: 95%;
-    margin: 60px auto;
-}
+/* SECCIÓN MI TRABAJO */
 
-.portfolio-info h2 {
-    font-size: 60px;
-    margin: 10px 0;
-    font-family: 'Dx Lactos', sans-serif;
-}
-
-.mitrabajo h4 {
+.linea {
+    font-family: 'ClashDisplay-Regular', sans-serif;
+    margin-bottom: 10px;
     font-size: 14px;
-    font-family: 'ClashDisplay-Regular', sans-serif
+    display: block;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: 2px solid #262223;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #262223;
-    font-family: 'ClashDisplay-Medium', sans-serif;
+.primera-seccion-proyectos {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 5%;
+    gap: 40px;
 }
+
+/* IZQUIERDA */
+.hero-izquierda {
+    max-width: 400px;
+}
+
+.linea {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 12px;
+}
+
+.linea::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 2px;
+    height: 14px;
+    background: #262223;
+}
+
+/* ESTRELLA */
+.estrella {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 90px;
+    ;
+}
+
+/* TITULO */
+.hero-izquierda h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* DERECHA */
+.hero-derecha {
+    display: flex;
+    justify-content: center;
+}
+
+/* CAJA */
+.caja {
+    width: 800px;
+    max-width: 200%;
+    min-width: 600px;
+    height: 350px;
+    border: 2px solid #262223;
+    border-radius: 30px;
+    padding: 30px;
+    justify-content: left;
+    position: relative;
+}
+
+/* NUMERO */
+.numero {
+    font-size: 200px;
+    font-weight: 600;
+    font-family: 'ClashDisplay-Semibold', sans-serif;
+    color: #262223;
+}
+
+/* NOMBRE */
+.nombre {
+    width: fit-content;
+    margin-top: 10px;
+    padding: 5px 12px;
+    border: 1px solid #231c1e;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: 'ClashDisplay-Medium', sans-serif;
+
+}
+
+
+/* DESCRIPCION */
+.desc {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .hero-proyectos {
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .hero-derecha {
+        width: 100%;
+    }
+
+    .caja {
+        width: 100%;
+    }
+
+    .hero-izquierda h1 {
+        font-size: 40px;
+    }
+}
+
+/* 2DA FILA */
+.segunda-fila-proyectos {
+    display: flex;
+    gap: 40px;
+    padding: 40px 5%;
+
+}
+
+.caja-dos {
+    flex-grow: 2;
+    max-width: 100%;
+    min-width: 600px;
+    height: 350px;
+    border: 2px solid #262223;
+    border-radius: 30px;
+    padding: 30px;
+    position: relative;
+}
+
+.caja-tres {
+    flex-grow: 1;
+    max-width: 100%;
+    min-width: 600px;
+    height: 350px;
+    border: 2px solid #262223;
+    border-radius: 30px;
+    padding: 30px;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    .segunda-fila-proyectos {
+        flex-direction: column;
+    }
+
+    .segunda-fila-proyectos.caja-dos {
+        width: 100%;
+    }
+
+    .segunda-fila-proyectos.caja-tres {
+        width: 100%;
+    }
+}
+
+/* 3ERA FILA*/
+.tercera-fila-proyectos {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    padding: 30px 5%;
+}
+
+
+.caja-cuatro {
+    width: 400px;
+    max-width: 100%;
+    min-width: 400px;
+    height: 350px;
+    border: 2px solid #262223;
+    border-radius: 30px;
+    padding: 30px;
+    position: relative;
+}
+
+/* FRASE FINAL */
+.frase {
+    margin-left: 40%;
+    display: flex;
+    text-align: right;
+    font-size: 20px;
+}
+
+
 
 footer {
     background: linear-gradient(to bottom, #a7fc00, #ffffff);
     text-align: center;
-    margin-top: 100px;
+    padding: 80px 20px;
     line-height: 3;
 }
 
 .contacto h3 {
     font-family: 'Dx Lactos';
-    font-size: 50px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .contacto p {
-    font-size: 20px;
     font-family: "Fira Code Medium", serif;
-    text-spacing-trim: 47px;
+    font-size: 14px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
 }
 
-.contacto li {
-    text-decoration: none;
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 40px
+}
+
+.redes img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
 }
