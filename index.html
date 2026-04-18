@@ -14,7 +14,7 @@
 <body>
     <header>
         <!--BARRA DE NAVEGACIÓN-->
-        <nav>
+        <nav> <!-- si el header no está siendo más que una etiqueta semántica te conviene repensar toda la estructura para simplificarla. Es parte importante del trabajo no complicar el código en vano y acá estás planteando un choclazo. Todas las propiedades del nav podrían estar aplicadas en header, el div interno no está haciendo nada y, para seguir utilizando una etiqueta nav, que esta misma reemplace a la ul, la cual es semánticamente más correcta para los botones de navegación. Lo único que agregaría es que la img puede estar dentro de una etiqueta a porque se acostumbra que el iso de la página linkee a la home. -->
             <div class="interior">
                 <img src="img/logo-mel.png" alt="logo mel">
 
@@ -39,17 +39,17 @@
                 <a href="contacto.html" class="boton">Trabajá conmigo</a>
             </div>
 
-            <img src="img/gatito.png" alt="gatito">
+            <img src="img/gatito.png" alt="gatito"> <!-- te recomiendo que trabajes esta imagen en svg o eps así no se pixela. También tenés que establecer alto y ancho desde html -->
         </section>
 
 
         <!-- SOBRE MI -->
         <article>
 
-            <img src="img/foto-personal.png" alt="foto de mel">
+            <img src="img/foto-personal.png" alt="foto de mel"> <!-- agregar medidas de imagen -->
 
-            <div class="sobre-mi">
-                <div class="linea-sobre-mi">
+            <div class="sobre-mi"> 
+                <div class="linea-sobre-mi"> <!-- este div está de más -->
                     <p>_</p>
                 </div>
 
@@ -74,7 +74,7 @@
         <section class="desplegables">
 
             <!-- EDUCACIÓN-->
-            <div class="item educacion">
+            <div class="item educacion"> <!-- para que todo esto no sean mil divs te recomiendo usar listas, fijate que intuitivamente ya le pusiste una class "item" y ya existe una etiqueta semántica con ese significado. Como dato, dentro de un li pueden haber más etiquetas y más listas internas -->
                 <div class="titulo">
                     <h3>Educación</h3>
                     <span>+</span>
@@ -114,7 +114,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section>  <!-- guarda que las herramientas te quedaron por fuera de esta section y genera confusión -->
 
         <!-- HERRAMIENTAS-->
         <div class="item herramientas">
@@ -124,49 +124,49 @@
             </div>
 
             <div class="contenido">
-                <img src="img/herramientas.png" alt="herramientas">
+                <img src="img/herramientas.png" alt="herramientas"> <!-- entiendo que es más fácil tener una sola imagne con los items, pero no es lo más conveniente porque cuando pases a mobile te van a quedar muy chiquitos, hacelo bien y poné una imagen por ícono. Además, ponele el tamaño y, si podés, agregalas como svg/eps -->
             </div>
         </div>
 
         <!-- TRABAJOS-->
-        <section class="proyectos">
-            <div class="titulo-proyectos">
+        <section class="proyectos"> <!-- aunque no hay una etiqueta semántica de títulos esta sección no es más que un cartel de bienvenida, podrías denominarlo como tal, o como banner, porque con la semantización de "proyectos" se espera que acá estén los proyectos en sí y sólo hay un título. De hecho, tendría una mejor esctructura si esta section incluyera a "tarjetas"  -->
+            <div class="titulo-proyectos"> 
                 <p>_</p>
                 <h3>Mi Trabajo</h3>
-                <h2>Proyectos<br>
+                <h2>Proyectos<br> <!-- no está bueno usar br para bajar los elementos, probá desde css ponerle un max-width -->
                     Destacados</h2>
             </div>
 
-            <img src="img/estrella-1.png" alt="estrella rosa">
+            <img src="img/estrella-1.png" alt="estrella rosa"> <!-- agregar tamaño -->
         </section>
 
         <section class="tarjetas">
 
             <!-- TARJETA 1 -->
-            <section class="tarjeta-1">
+            <section class="tarjeta-1"> <!-- no es semánticamente correcto que haya sections dentro de sections, tal vez como tienen números, es más apropiado que sea una lista -->
                 <div class="tarjeta-1-contenido">
-                    <img src="img/proyecto-1-tarjeta.png" alt="proyecto 1 tarjeta">
+                    <img src="img/proyecto-1-tarjeta.png" alt="proyecto 1 tarjeta"> <!-- agregar tamaño -->
                 </div>
             </section>
 
             <!-- TARJETA 2 -->
             <section class="tarjeta-2">
                 <div class="tarjeta-2-contenido">
-                    <img src="img/proyecto-2-tarjeta.png" alt="proyecto 2 tarjeta">
+                    <img src="img/proyecto-2-tarjeta.png" alt="proyecto 2 tarjeta"> <!-- agregar tamaño -->
                 </div>
             </section>
 
             <!-- TARJETA 3 -->
             <section class="tarjeta-3">
                 <div class="tarjeta-3-contenido">
-                    <img src="img/proyecto-3-tarjeta.png" alt="proyecto 3 tarjeta">
+                    <img src="img/proyecto-3-tarjeta.png" alt="proyecto 3 tarjeta"> <!-- agregar tamaño -->
                 </div>
             </section>
 
             <!-- TARJETA 4 -->
             <section class="tarjeta-4">
                 <div class="tarjeta-4-contenido">
-                    <img src="img/proyecto-4-tarjeta.png" alt="proyecto 4 tarjeta">
+                    <img src="img/proyecto-4-tarjeta.png" alt="proyecto 4 tarjeta"> <!-- agregar tamaño -->
                 </div>
             </section>
         </section>
@@ -177,16 +177,16 @@
 
         <!-- FRASE-->
         <section class="frase">
-            <img src="img/guarda-formas.png" alt="guarda de formas" width="1300">
+            <img src="img/guarda-formas.png" alt="guarda de formas" width="1300"> <!-- agregar alto, mejor en svg -->
             <p>Me interesa crear marcas con <span>identidad y proposito.</span></p>
-            <img src="img/guarda-formas.png" alt="guarda de formas" width="1300">
+            <img src="img/guarda-formas.png" alt="guarda de formas" width="1300"> <!-- agregar alto, mejor en svg -->
         </section>
     </main>
 
     <footer>
 
         <!-- CONTACTO -->
-        <div class="footer-seccion">
+        <div class="footer-seccion"> 
             <div class="linea"></div>
             <h4>Contacto</h4>
             <p>melaniemaydana@gmail.com</p>
@@ -197,14 +197,14 @@
         <div class="footer-seccion">
             <div class="linea"></div>
             <h4>Redes</h4>
-            <p>Ig: @melofotoydiseno</p>
+            <p>Ig: @melofotoydiseno</p> <!-- completá los links con la clase de la etiqueta a así queda más real -->
             <p>Be: Melanie Maydana</p>
         </div>
 
         <!-- UBICACION -->
         <div class="footer-seccion">
             <div class="linea"></div>
-            <h4>&nbsp;</h4>
+            <h4>&nbsp;</h4> <!-- y esto qué es? -->
             <p>Zona sur, Adrogué</p>
             <p>Buenos Aires, Argentina</p>
         </div>
