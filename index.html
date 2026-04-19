@@ -12,18 +12,17 @@
 </head>
 
 <body>
-    <header>
-        <!--BARRA DE NAVEGACIÓN-->
-        <nav> <!-- si el header no está siendo más que una etiqueta semántica te conviene repensar toda la estructura para simplificarla. Es parte importante del trabajo no complicar el código en vano y acá estás planteando un choclazo. Todas las propiedades del nav podrían estar aplicadas en header, el div interno no está haciendo nada y, para seguir utilizando una etiqueta nav, que esta misma reemplace a la ul, la cual es semánticamente más correcta para los botones de navegación. Lo único que agregaría es que la img puede estar dentro de una etiqueta a porque se acostumbra que el iso de la página linkee a la home. -->
-            <div class="interior">
-                <img src="img/logo-mel.png" alt="logo mel">
 
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="porfolio.html">Portfolio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
+    <!--BARRA DE NAVEGACIÓN-->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo-mel.png" alt="Logo Mel">
+        </a>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contacto</a>
         </nav>
     </header>
 
@@ -36,22 +35,21 @@
                 <h1>Hola, soy <span>Mel!</span></h1>
                 <h2>Diseñadora Gráfica</h2>
 
-                <a href="contacto.html" class="boton">Trabajá conmigo</a>
+                <a href="#" class="boton">Trabajá conmigo</a>
             </div>
 
-            <img src="img/gatito.png" alt="gatito"> <!-- te recomiendo que trabajes esta imagen en svg o eps así no se pixela. También tenés que establecer alto y ancho desde html -->
+            <img src="img/gatito.svg" alt="gatito" width="293.4px" height="272.78px">
         </section>
 
 
         <!-- SOBRE MI -->
         <article>
 
-            <img src="img/foto-personal.png" alt="foto de mel"> <!-- agregar medidas de imagen -->
+            <img src="img/foto-personal.png" alt="foto de mel" width="570px" height="642px">
 
-            <div class="sobre-mi"> 
-                <div class="linea-sobre-mi"> <!-- este div está de más -->
-                    <p>_</p>
-                </div>
+            <div class="sobre-mi">
+
+                <p>_</p>
 
                 <div class="sobre-mi-texto">
                     <h3>Sobre Mi</h3>
@@ -70,141 +68,176 @@
             </div>
         </article>
 
-
+        <!--DESPLEGABLES-->
         <section class="desplegables">
 
-            <!-- EDUCACIÓN-->
-            <div class="item educacion"> <!-- para que todo esto no sean mil divs te recomiendo usar listas, fijate que intuitivamente ya le pusiste una class "item" y ya existe una etiqueta semántica con ese significado. Como dato, dentro de un li pueden haber más etiquetas y más listas internas -->
-                <div class="titulo">
-                    <h3>Educación</h3>
-                    <span>+</span>
-                </div>
+            <ul class="lista">
 
-                <div class="contenido">
-                    <h4>2022-Presente Licenciatura en Diseño y Comunicación Visual</h4>
-                    <p>Universidad Nacional de Lanús</p>
+                <!-- EDUCACIÓN -->
+                <li class="item educacion">
+                    <div class="titulo">
+                        <h3>Educación</h3>
+                        <span>+</span>
+                    </div>
 
-                    <h4>2019-2020 Fotografía</h4>
-                    <p>Foto Escuela, Adrogué</p>
-                </div>
-            </div>
+                    <div class="contenido">
+                        <h4>2022–Presente Licenciatura en Diseño y Comunicación Visual</h4>
+                        <p>Universidad Nacional de Lanús</p>
 
-            <!-- EXPERIENCIA LABORAL-->
-            <div class="item experiencia">
-                <div class="titulo">
-                    <h3>Experiencia Laboral</h3>
-                    <span>+</span>
-                </div>
+                        <h4>2019–2020 Fotografía</h4>
+                        <p>Foto Escuela, Adrogué</p>
+                    </div>
+                </li>
 
-                <div class="contenido">
-                    <h4>2024-Presente Diseñadora Gráfica Freelance</h4>
-                    <p>Trabajo con clientes desarrollando soluciones visuales adaptadas a sus necesidades:</p>
-                    <ul>
-                        <li>Identidad de marca</li>
-                        <li>Piezas para redes sociales</li>
-                        <li>Diseño editorial</li>
-                        <li>Packaging</li>
-                    </ul>
+                <!-- EXPERIENCIA -->
+                <li class="item experiencia">
+                    <div class="titulo">
+                        <h3>Experiencia Laboral</h3>
+                        <span>+</span>
+                    </div>
 
-                    <h4>2026-Presente Practicante de Diseño - Raw Creative Studio</h4>
-                    <ul>
-                        <li>Diseño de piezas para redes</li>
-                        <li>Desarrollo de propuestas de branding</li>
-                        <li>Trabajo en equipo con otros diseñadores</li>
-                    </ul>
-                </div>
-            </div>
-        </section>  <!-- guarda que las herramientas te quedaron por fuera de esta section y genera confusión -->
+                    <div class="contenido">
+                        <h4>2024–Presente Diseñadora Gráfica</h4>
+                        <p>Trabajo con clientes desarrollando soluciones visuales:</p>
 
-        <!-- HERRAMIENTAS-->
-        <div class="item herramientas">
-            <div class="titulo">
-                <h3>Herramientas</h3>
-                <span>+</span>
-            </div>
+                        <ul>
+                            <li>Identidad de marca</li>
+                            <li>Piezas para redes sociales</li>
+                            <li>Diseño editorial</li>
+                            <li>Packaging</li>
+                        </ul>
 
-            <div class="contenido">
-                <img src="img/herramientas.png" alt="herramientas"> <!-- entiendo que es más fácil tener una sola imagne con los items, pero no es lo más conveniente porque cuando pases a mobile te van a quedar muy chiquitos, hacelo bien y poné una imagen por ícono. Además, ponele el tamaño y, si podés, agregalas como svg/eps -->
-            </div>
-        </div>
+                        <h4>2026–Presente Practicante - Raw Creative Studio</h4>
+                        <ul>
+                            <li>Diseño de piezas para redes</li>
+                            <li>Propuestas de branding</li>
+                            <li>Trabajo en equipo con diseñadores</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- HERRAMIENTAS -->
+                <li class="item herramientas">
+                    <div class="titulo">
+                        <h3>Herramientas</h3>
+                        <span>+</span>
+                    </div>
+
+                    <div class="contenido">
+                        <ul class="tools">
+                            <li>
+                                <img src="img/ai.svg" alt="Adobe Illustrator" width="83" height="83">
+                            </li>
+
+                            <li>
+                                <img src="img/ps.svg" alt="Adobe Photoshop" width="83" height="83">
+                            </li>
+
+                            <li>
+                                <img src="img/id.svg" alt="Adobe InDesign" width="83" height="83">
+                            </li>
+
+                            <li>
+                                <img src="img/lr.svg" alt="Adobe Lightroom" width="83" height="83">
+                            </li>
+
+                            <li>
+                                <img src="img/figma.svg" alt="Figma" width="83" height="83">
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+            </ul>
+
+        </section>
 
         <!-- TRABAJOS-->
-        <section class="proyectos"> <!-- aunque no hay una etiqueta semántica de títulos esta sección no es más que un cartel de bienvenida, podrías denominarlo como tal, o como banner, porque con la semantización de "proyectos" se espera que acá estén los proyectos en sí y sólo hay un título. De hecho, tendría una mejor esctructura si esta section incluyera a "tarjetas"  -->
-            <div class="titulo-proyectos"> 
+        <section class="banner">
+            <div class="titulo-proyectos">
                 <p>_</p>
                 <h3>Mi Trabajo</h3>
-                <h2>Proyectos<br> <!-- no está bueno usar br para bajar los elementos, probá desde css ponerle un max-width -->
+                <h2>Proyectos
                     Destacados</h2>
             </div>
 
-            <img src="img/estrella-1.png" alt="estrella rosa"> <!-- agregar tamaño -->
+            <img src="img/estrella.svg" alt="estrella rosa" width="282" height="282">
         </section>
 
         <section class="tarjetas">
 
             <!-- TARJETA 1 -->
-            <section class="tarjeta-1"> <!-- no es semánticamente correcto que haya sections dentro de sections, tal vez como tienen números, es más apropiado que sea una lista -->
+            <div class="tarjeta-1">
                 <div class="tarjeta-1-contenido">
-                    <img src="img/proyecto-1-tarjeta.png" alt="proyecto 1 tarjeta"> <!-- agregar tamaño -->
+                    <img src="img/proyecto-1-tarjeta.png" alt="proyecto 1 tarjeta" width="300" height="470">
                 </div>
-            </section>
+            </div>
 
             <!-- TARJETA 2 -->
-            <section class="tarjeta-2">
+            <div class="tarjeta-2">
                 <div class="tarjeta-2-contenido">
-                    <img src="img/proyecto-2-tarjeta.png" alt="proyecto 2 tarjeta"> <!-- agregar tamaño -->
+                    <img src="img/proyecto-2-tarjeta.png" alt="proyecto 2 tarjeta" width="319" height="470">
                 </div>
-            </section>
+            </div>
 
             <!-- TARJETA 3 -->
-            <section class="tarjeta-3">
+            <div class="tarjeta-3">
                 <div class="tarjeta-3-contenido">
-                    <img src="img/proyecto-3-tarjeta.png" alt="proyecto 3 tarjeta"> <!-- agregar tamaño -->
+                    <img src="img/proyecto-3-tarjeta.png" alt="proyecto 3 tarjeta" width="318" height="470">
                 </div>
-            </section>
+            </div>
 
             <!-- TARJETA 4 -->
-            <section class="tarjeta-4">
+            <div class="tarjeta-4">
                 <div class="tarjeta-4-contenido">
-                    <img src="img/proyecto-4-tarjeta.png" alt="proyecto 4 tarjeta"> <!-- agregar tamaño -->
+                    <img src="img/proyecto-4-tarjeta.png" alt="proyecto 4 tarjeta" width="304" height="470">
                 </div>
-            </section>
+            </div>
         </section>
 
         <section class="area-boton">
-            <a href="porfolio.html" class="boton">Ver más trabajos</a>
+            <a href="#" class="boton">Ver más trabajos</a>
         </section>
 
         <!-- FRASE-->
         <section class="frase">
-            <img src="img/guarda-formas.png" alt="guarda de formas" width="1300"> <!-- agregar alto, mejor en svg -->
+            <img src="img/guarda-formas.svg" alt="guarda de formas" width="1647" height="75">
             <p>Me interesa crear marcas con <span>identidad y proposito.</span></p>
-            <img src="img/guarda-formas.png" alt="guarda de formas" width="1300"> <!-- agregar alto, mejor en svg -->
+            <img src="img/guarda-formas.svg" alt="guarda de formas" width="1647" height="75">
         </section>
     </main>
 
     <footer>
 
         <!-- CONTACTO -->
-        <div class="footer-seccion"> 
+        <div class="footer-seccion">
             <div class="linea"></div>
             <h4>Contacto</h4>
-            <p>melaniemaydana@gmail.com</p>
-            <p>+54 11 2462-4943</p>
+            <p> <a href="mailto:melaniemaydana@gmail.com">
+                    melaniemaydana@gmail.com
+                </a></p>
+            <p> <a href="tel:+541124624943">
+                    +54 11 2462-4943
+                </a></p>
         </div>
 
         <!-- REDES -->
         <div class="footer-seccion">
             <div class="linea"></div>
             <h4>Redes</h4>
-            <p>Ig: @melofotoydiseno</p> <!-- completá los links con la clase de la etiqueta a así queda más real -->
-            <p>Be: Melanie Maydana</p>
+            <p><a href="https://www.instagram.com/melfotoydiseno/" target="_blank">
+                    Ig: @melofotoydiseno
+                </a></p>
+            <p><a href="https://www.behance.net/melumaydana" target="_blank">
+                    Be: Melanie Maydana
+                </a></p>
         </div>
 
         <!-- UBICACION -->
         <div class="footer-seccion">
             <div class="linea"></div>
-            <h4>&nbsp;</h4> <!-- y esto qué es? -->
             <p>Zona sur, Adrogué</p>
             <p>Buenos Aires, Argentina</p>
         </div>

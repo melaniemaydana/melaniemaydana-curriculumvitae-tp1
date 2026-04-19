@@ -78,52 +78,48 @@
 
 body {
     background-color: #eaeaea;
-    margin-top: 40px; /* esta propiedad no genera cambios */
+    margin: 30px;
 }
 
 /* BARRA DE NAVEGACIÓN */
-nav {
+header {
     background-color: #a7fc00;
     border: 2px solid #262223;
     border-radius: 40px;
-    display: flex; /* no hace nada porque hay un solo hijo */
-    padding: 21px 64px 21px 44px;
-    align-items: flex-start; /* idem */
-    gap: 10px;
-    margin-left: 30px; /* te conviene aplicar los margin en una sola línea */
-    margin-right: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 21px 64px;
     margin-top: 40px;
 }
 
+/* LOGO */
+.logo img {
+    height: 40px;
+}
+
 /* MENÚ */
-.menu {
-    list-style: none;
+nav {
     display: flex;
-    justify-content: flex-end; /* no genera cambios */
     align-items: center;
     gap: 70px;
 }
 
-.interior {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
 /* LINKS */
-.menu a {
+nav a {
     text-decoration: none;
     color: #262223;
-    font-size: 18px;
+    font-size: 1.1rem;
     font-family: 'ClashDisplay-Regular', sans-serif;
     font-weight: 400;
     transition: 0.3s;
 }
 
-.menu a:hover {
+/* HOVER */
+nav a:hover {
     color: #6E6EFF;
-
 }
 
 /* HERO */
@@ -131,17 +127,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px, 10%; /* no se utilizan comas para separar los valores, esto genera un error en el inspector */
-    margin-left: 90px;
-    margin-right: 90px; /* normalizá los margins en una línea */
+    padding: 5% 5%;
+    margin: 0px 70px 70px 0px;
     gap: 40px;
-    margin-bottom: 188px; /* en clases mencionamos que los margins mayores a 100px son un problema cuando se pasa a pantallas más grandes, si estás buscando que el hero tenga un tamaño con una relación directa a la pantalla te conviene utilizar medidas en vh (viewport-height) que funciona igual a los porcentajes, supongamos que quieras que tenga el 50% del tamaño de una pantalla, deberías poner como valor height: 50vh; */
+    margin-bottom: 20vh;
 }
 
 /* TEXTO */
-.hero-text {
-    max-width: 1000px; /* no produce cambios */
-}
 
 .hero-text p {
     color: #df73ff;
@@ -179,7 +171,7 @@ h2 {
     background: transparent;
     color: #231c1e;
     cursor: pointer;
-    font-family: "Clash Display Variable", sans-serif;
+    font-family: "ClashDisplay-Variable", sans-serif;
     font-size: 1, 8rem;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -190,80 +182,74 @@ h2 {
     border: none;
     color: #eaeaea;
     background: linear-gradient(90deg, #6E6EFF 20%, #262223 100%);
-    font-family: "Clash Display Variable"; /* guarda que en el botón de las tarjetas no está funcionando esta familia porque no está escrito igual que lo declaraste en @font-face */
+    font-family: "ClashDisplay-Variable";
 }
 
 /* IMAGEN */
 
 .hero-img img {
-    width: 250px;
+    width: 570px;
     height: auto;
 }
 
 /*SOBRE MI*/
 
 article {
-    margin-left: 30px; /* unificar margins y paddings */
-    margin-right: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
     display: flex;
     align-items: center;
     gap: 60px;
     background: #231c1e;
     border-radius: 40px;
-    margin-block-end: 10px; /* esta propiedad no la vimos, qué significa? */
+    margin-block-end: 10px;
 }
 
-.linea-sobre-mi p {
+.sobre-mi p {
     color: #F0BDF3;
     font-size: 5rem;
-    margin-block-start: 5px; /* esta propiedad no la vimos, qué significa? */
+    margin: 5px 0 5px 0px;
 }
 
 .sobre-mi-texto {
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .sobre-mi-texto h3 {
     font-size: 3rem;
     margin-bottom: 20px;
     color: #F0BDF3;
-    font-family: "Clash Display Variable", sans-serif;
+    font-family: "ClashDisplay-Variable", sans-serif;
     font-weight: 600;
 }
 
 .sobre-mi-texto p {
     color: #EAEAEA;
-    font-family: "Fira Code"; /* no repitas! esto ya lo estableciste en el selector universal */
     font-size: 1.5rem;
-    font-style: normal; /* no produce cambios */
-    font-weight: 400; /* no produce cambios */
-    line-height: normal; /* no produce cambios */
-}
-
-.sobre-mi {
-    gap: 40px /* esta propiedad no funciona porque no le pusiste punto y coma y no tiene flex aplicado, gap es una propiedad de flex */
 }
 
 /*DESPLEGABLES*/
 
 .desplegables {
-    width: 100%; /* estas propiedades no producen cambios */
     height: fit-content;
 
 }
 
-.item {
-    padding: 25px 5%;
-    cursor: pointer; /* a nivel experiencia de usuario, poner un cursor como pointer indica que el contenido es clickeable y va a hacer algo, en este caso al clickear no pasa nada y podría considerarse como un error, a menos que sea una decisión consciente de diseño */
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
     transition: 0.3s ease;
+}
+
+.item {
+    padding: 0 50px 30px 50px;
 }
 
 /* EDUCACIÓN */
 .educacion {
     background-color: #a7fc00;
-    margin-top: 200px; /* alerta de margin muy grande */
+    margin-top: 30vh;
     border-top: 2px solid #262223;
     border-bottom: 2px solid #262223;
 }
@@ -276,7 +262,7 @@ article {
 
 .titulo h3 {
     font-size: 3rem;
-    font-family: "Clash Display Variable", sans-serif;
+    font-family: "ClashDisplay-Variable", sans-serif;
     font-weight: 600;
 }
 
@@ -289,12 +275,10 @@ article {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    margin-top: 5px; /* unificar margin */
-    margin-bottom: 10px;
+    margin: 5px 0px 10px 0;
 }
 
 .contenido h4 {
-    font-family: "Fira Code"; /* no repitas!! */
     font-size: 1rem;
     font-weight: bold;
 }
@@ -323,25 +307,32 @@ article {
     border-bottom: 2px solid #262223;
 }
 
+.herramientas ul {
+    list-style: none;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
 /*PROYECTOS DESTACADOS*/
 
-.proyectos {
+.banner {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-left: 90px; /* unificar */
-    margin-right: 90px;
+    margin: 0 90px 0 90px;
 }
 
 .titulo-proyectos p {
     color: #df73ff;
     font-size: 5rem;
+    max-width: 50%;
 }
 
 .titulo-proyectos h3 {
     font-size: 3rem;
     color: #262223;
-    font-family: "Clash Display Variable", sans-serif;
+    font-family: "ClashDisplay-Variable", sans-serif;
     font-weight: 600;
     padding-bottom: 20px;
 }
@@ -349,20 +340,14 @@ article {
 .titulo-proyectos h2 {
     font-family: 'Dx Lactos', sans-serif;
     font-size: 7rem;
-    color: #262223; /* no repitas!! */
-    line-height: 1.1; /* no produce cambios */
 }
 
 
 
 .tarjetas {
     display: flex;
-    align-items: center; /* no producce cambios */
     gap: 60px;
-    margin-left: 45px; /* unificar */
-    margin-right: 45px;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin: 100px 45px 50px 45px;
 }
 
 /*TARJETA 1*/
@@ -439,8 +424,7 @@ article {
 
 .area-boton {
     text-align: right;
-    margin-right: 45px; /* unificar */
-    margin-bottom: 200px; /* alerta de margin muy grande */
+    margin: 0 45px 20vh 0;
 }
 
 /*FRASE*/
@@ -449,23 +433,16 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 128px; /* alerta de gap y margin muy grande */
-    margin-bottom: 198px;
+    gap: 128px;
+    margin-bottom: 20vh
 }
 
 .frase p {
-    color: #262223;
     text-align: center;
-    font-family: "Fira Code"; /* no repitas!! */
     font-size: 2.5rem;
-    font-weight: 400; /* no produce cambios */
 }
 
-.frase span { /* en un span solamente deberías declarar la propiedad que va a diferenciar dentro de la p, el resto alarga el código */
-    color: #262223;
-    text-align: center;
-    font-family: "Fira Code"; /* no repitas!! */
-    font-size: 2.5rem;
+.frase span {
     font-weight: 600;
 }
 
@@ -494,7 +471,7 @@ footer {
 .footer-seccion h4 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    font-family: "Clash Display Variable", sans-serif;
+    font-family: "ClashDisplay-Variable", sans-serif;
     font-weight: 500;
 }
 
@@ -503,138 +480,11 @@ footer {
     margin-bottom: 8px;
 }
 
-
-/*MIS PROYECTOS*/
-
-.mis-proyectos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 48px;
-    margin-top: 185px;
+.footer-seccion a {
+    text-decoration: none;
+    color: #262223;
 }
 
-.mis-proyectos img {
-    text-align: center;
-}
-
-.mis-proyectos h2 {
-    font-family: "Dx Lactos", sans-serif;
-    font-size: 9rem;
-}
-
-/*GRILLA PROYECTOS*/
-
-/* CONTENEDOR */
-
-.proyectos-galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 70px 5%;
-    margin-bottom: 200px;
-}
-
-/* ITEM */
-.proyecto {
-    flex: 1 1 calc(33.333% - 30px);
-    margin-bottom: 50px;
-}
-
-/* IMAGEN */
-.proyecto img {
-    width: 100%;
-    height: 405px;
-    object-fit: cover;
-    border-radius: 40px;
-    border: 2px solid #262223;
-    display: block;
-}
-
-/* NOMBRES */
-.nombre {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 5px 12px;
-    border: 2px solid #231c1e;
-    border-radius: 20px;
-    font-family: "Clash Display Variable", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-/* TIPO */
-.tipo {
-    font-size: 1rem;
-    margin-top: 15px;
-}
-
-.proyecto img {
-    transition: transform 0.3s ease;
-}
-
-.proyecto:hover img {
-    transform: scale(1.05);
-}
-
-/*CONTACTO*/
-
-.contacto {
-    padding: 80px 5%;
-    text-align: center;
-    margin-top: 50px;
-}
-
-
-.contacto h2 {
-    font-family: "Dx Lactos", sans-serif;
-    font-size: 9rem;
-    margin-bottom: 10px;
-}
-
-.contacto p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.contacto img {
-    margin-bottom: 40px;
-}
-
-/* FORMULARIO*/
-.formulario {
-    max-width: 100%;
-    margin: 0 auto;
-    margin-top: 100px; /* unificar margin */
-}
-
-/* FILA DOBLE */
-.fila {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    margin-bottom: 15px;
-}
-
-/* INPUTS */
-input,
-textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 20px;
-    border: 2px solid #262223;
-    background: #d9d9d9;
-    font-family: "Clash Display Variable", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    outline: none;
-    gap: 10px;
-}
-
-/* TEXTAREA */
-textarea {
-    height: 200px;
-    resize: none;
-    margin-top: 15px; /* unificar margin */
-    margin-bottom: 30px;
+footer a:hover {
+    opacity: 0.7;
 }
