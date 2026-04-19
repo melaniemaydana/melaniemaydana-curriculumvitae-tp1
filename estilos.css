@@ -78,7 +78,7 @@
 
 body {
     background-color: #eaeaea;
-    margin-top: 40px;
+    margin-top: 40px; /* esta propiedad no genera cambios */
 }
 
 /* BARRA DE NAVEGACIÓN */
@@ -86,11 +86,11 @@ nav {
     background-color: #a7fc00;
     border: 2px solid #262223;
     border-radius: 40px;
-    display: flex;
+    display: flex; /* no hace nada porque hay un solo hijo */
     padding: 21px 64px 21px 44px;
-    align-items: flex-start;
+    align-items: flex-start; /* idem */
     gap: 10px;
-    margin-left: 30px;
+    margin-left: 30px; /* te conviene aplicar los margin en una sola línea */
     margin-right: 30px;
     margin-top: 40px;
 }
@@ -99,7 +99,7 @@ nav {
 .menu {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* no genera cambios */
     align-items: center;
     gap: 70px;
 }
@@ -131,16 +131,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px, 10%;
+    padding: 80px, 10%; /* no se utilizan comas para separar los valores, esto genera un error en el inspector */
     margin-left: 90px;
-    margin-right: 90px;
+    margin-right: 90px; /* normalizá los margins en una línea */
     gap: 40px;
-    margin-bottom: 188px;
+    margin-bottom: 188px; /* en clases mencionamos que los margins mayores a 100px son un problema cuando se pasa a pantallas más grandes, si estás buscando que el hero tenga un tamaño con una relación directa a la pantalla te conviene utilizar medidas en vh (viewport-height) que funciona igual a los porcentajes, supongamos que quieras que tenga el 50% del tamaño de una pantalla, deberías poner como valor height: 50vh; */
 }
 
 /* TEXTO */
 .hero-text {
-    max-width: 1000px;
+    max-width: 1000px; /* no produce cambios */
 }
 
 .hero-text p {
@@ -190,7 +190,7 @@ h2 {
     border: none;
     color: #eaeaea;
     background: linear-gradient(90deg, #6E6EFF 20%, #262223 100%);
-    font-family: "Clash Display Variable";
+    font-family: "Clash Display Variable"; /* guarda que en el botón de las tarjetas no está funcionando esta familia porque no está escrito igual que lo declaraste en @font-face */
 }
 
 /* IMAGEN */
@@ -203,7 +203,7 @@ h2 {
 /*SOBRE MI*/
 
 article {
-    margin-left: 30px;
+    margin-left: 30px; /* unificar margins y paddings */
     margin-right: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -212,13 +212,13 @@ article {
     gap: 60px;
     background: #231c1e;
     border-radius: 40px;
-    margin-block-end: 10px;
+    margin-block-end: 10px; /* esta propiedad no la vimos, qué significa? */
 }
 
 .linea-sobre-mi p {
     color: #F0BDF3;
     font-size: 5rem;
-    margin-block-start: 5px;
+    margin-block-start: 5px; /* esta propiedad no la vimos, qué significa? */
 }
 
 .sobre-mi-texto {
@@ -235,35 +235,35 @@ article {
 
 .sobre-mi-texto p {
     color: #EAEAEA;
-    font-family: "Fira Code";
+    font-family: "Fira Code"; /* no repitas! esto ya lo estableciste en el selector universal */
     font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-style: normal; /* no produce cambios */
+    font-weight: 400; /* no produce cambios */
+    line-height: normal; /* no produce cambios */
 }
 
 .sobre-mi {
-    gap: 40px
+    gap: 40px /* esta propiedad no funciona porque no le pusiste punto y coma y no tiene flex aplicado, gap es una propiedad de flex */
 }
 
 /*DESPLEGABLES*/
 
 .desplegables {
-    width: 100%;
+    width: 100%; /* estas propiedades no producen cambios */
     height: fit-content;
 
 }
 
 .item {
     padding: 25px 5%;
-    cursor: pointer;
+    cursor: pointer; /* a nivel experiencia de usuario, poner un cursor como pointer indica que el contenido es clickeable y va a hacer algo, en este caso al clickear no pasa nada y podría considerarse como un error, a menos que sea una decisión consciente de diseño */
     transition: 0.3s ease;
 }
 
 /* EDUCACIÓN */
 .educacion {
     background-color: #a7fc00;
-    margin-top: 200px;
+    margin-top: 200px; /* alerta de margin muy grande */
     border-top: 2px solid #262223;
     border-bottom: 2px solid #262223;
 }
@@ -289,12 +289,12 @@ article {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    margin-top: 5px;
+    margin-top: 5px; /* unificar margin */
     margin-bottom: 10px;
 }
 
 .contenido h4 {
-    font-family: "Fira Code";
+    font-family: "Fira Code"; /* no repitas!! */
     font-size: 1rem;
     font-weight: bold;
 }
@@ -329,7 +329,7 @@ article {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-left: 90px;
+    margin-left: 90px; /* unificar */
     margin-right: 90px;
 }
 
@@ -349,17 +349,17 @@ article {
 .titulo-proyectos h2 {
     font-family: 'Dx Lactos', sans-serif;
     font-size: 7rem;
-    color: #262223;
-    line-height: 1.1;
+    color: #262223; /* no repitas!! */
+    line-height: 1.1; /* no produce cambios */
 }
 
 
 
 .tarjetas {
     display: flex;
-    align-items: center;
+    align-items: center; /* no producce cambios */
     gap: 60px;
-    margin-left: 45px;
+    margin-left: 45px; /* unificar */
     margin-right: 45px;
     margin-top: 100px;
     margin-bottom: 50px;
@@ -439,8 +439,8 @@ article {
 
 .area-boton {
     text-align: right;
-    margin-right: 45px;
-    margin-bottom: 200px;
+    margin-right: 45px; /* unificar */
+    margin-bottom: 200px; /* alerta de margin muy grande */
 }
 
 /*FRASE*/
@@ -449,22 +449,22 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 128px;
+    gap: 128px; /* alerta de gap y margin muy grande */
     margin-bottom: 198px;
 }
 
 .frase p {
     color: #262223;
     text-align: center;
-    font-family: "Fira Code";
+    font-family: "Fira Code"; /* no repitas!! */
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 400; /* no produce cambios */
 }
 
-.frase span {
+.frase span { /* en un span solamente deberías declarar la propiedad que va a diferenciar dentro de la p, el resto alarga el código */
     color: #262223;
     text-align: center;
-    font-family: "Fira Code";
+    font-family: "Fira Code"; /* no repitas!! */
     font-size: 2.5rem;
     font-weight: 600;
 }
@@ -605,7 +605,7 @@ footer {
 .formulario {
     max-width: 100%;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 100px; /* unificar margin */
 }
 
 /* FILA DOBLE */
@@ -635,6 +635,6 @@ textarea {
 textarea {
     height: 200px;
     resize: none;
-    margin-top: 15px;
+    margin-top: 15px; /* unificar margin */
     margin-bottom: 30px;
 }
