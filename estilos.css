@@ -67,122 +67,139 @@
 }
 
 
-* {
+p {
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Ajustes especificos*/
 
 body {
     background-color: #eaeaea;
-    margin: 30px;
 }
 
-/* BARRA DE NAVEGACIÓN */
+/* HEADER */
 header {
-    background-color: #a7fc00;
-    border: 2px solid #262223;
-    border-radius: 40px;
+    background: linear-gradient(0deg, #6E6EFF 20%, #262223 100%);
+    display: flex;
+    flex-direction: column;
+}
 
+/* NAVBAR */
+
+nav {
+    min-width: 500px;
+    max-width: 1446px;
+    padding: 100px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 21px 64px;
-    margin-top: 40px;
 }
 
 /* LOGO */
 .logo img {
-    height: 40px;
+    width: 45px;
 }
 
-/* MENÚ */
-nav {
+/* LINKS */
+.nav-links {
+    list-style: none;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 70px;
 }
 
-/* LINKS */
-nav a {
+.nav-links a {
     text-decoration: none;
-    color: #262223;
-    font-size: 1.1rem;
-    font-family: 'ClashDisplay-Regular', sans-serif;
+    color: #EAEAEA;
+    font-size: 1.35rem;
+    font-family: 'ClashDisplay-Variable';
     font-weight: 400;
     transition: 0.3s;
 }
 
 /* HOVER */
 nav a:hover {
-    color: #6E6EFF;
+    color: #a7fc00;
 }
 
 /* HERO */
-.hero {
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    padding: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5% 5%;
-    margin: 0px 70px 70px 0px;
-    gap: 40px;
-    margin-bottom: 20vh;
+}
+
+/* CONTENIDO */
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+}
+
+/* LINEA */
+
+.mini-line{
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 20px;
 }
 
 /* TEXTO */
 
-.hero-text p {
-    color: #df73ff;
-    font-size: 5rem;
-    padding-bottom: 5px;
+p{
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-h1 {
-    font-family: 'Dx Lactos', sans-serif;
-    font-size: 8rem;
-    color: #262223;
-    line-height: 1.1;
+h1{
+    color: white;
+    font-size: 120px;
     margin-bottom: 10px;
-    padding-bottom: 5px;
 }
 
-h1 span {
-    color: #6E6EFF;
-    font-family: 'Dx Lactos', sans-serif;
+h1 span{
+    color: #b6ff00;
 }
 
-h2 {
-    font-family: 'ClashDisplay-Regular', sans-serif;
-    font-size: 4rem;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    color: #262223;
+h2{
+    color: white;
+    font-size: 60px;
+    margin-bottom: 40px;
 }
 
-/* BOTÓN */
-.boton {
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: 1px solid #231c1e;
-    background: transparent;
-    color: #231c1e;
-    cursor: pointer;
-    font-family: "ClashDisplay-Variable", sans-serif;
-    font-size: 1, 8rem;
+/* BOTON */
+
+.boton{
+    width: fit-content;
+    padding: 12px 24px;
+    border: 1px solid white;
+    border-radius: 999px;
     text-decoration: none;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
+    color: white;
 }
 
-.boton:hover {
-    border: none;
-    color: #eaeaea;
-    background: linear-gradient(90deg, #6E6EFF 20%, #262223 100%);
-    font-family: "ClashDisplay-Variable";
+/* ESTRELLA */
+
+.estrella {
+    width: 240px;
+    height: 240 px;
 }
 
 /* IMAGEN */
