@@ -156,31 +156,37 @@ nav a:hover {
 .mini-line{
     width: 30px;
     height: 4px;
-    background-color: white;
+    background-color: #EAEAEA;
     margin-bottom: 20px;
 }
 
 /* TEXTO */
 
 p{
-    color: white;
+    color: #EAEAEA;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 h1{
-    color: white;
-    font-size: 120px;
+    color: #EAEAEA;
+    font-family: 'ClashDisplay-Variable';
+    font-size: 11.25rem;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 
 h1 span{
-    color: #b6ff00;
+    color: #a7fc00;
+    font-family: 'Dx Lactos';
+    font-size: 11.25rem;
 }
 
 h2{
-    color: white;
-    font-size: 60px;
+    color: #EAEAEA;
+    font-family: 'ClashDisplay-Variable';
+    font-weight: 400;
+    font-size: 5rem;
     margin-bottom: 40px;
 }
 
@@ -189,10 +195,13 @@ h2{
 .boton{
     width: fit-content;
     padding: 12px 24px;
-    border: 1px solid white;
+    border: 1px solid #EAEAEA;
     border-radius: 999px;
     text-decoration: none;
-    color: white;
+    font-family: 'ClashDisplay-Variable';
+    font-size: 1.8rem;
+    font-weight: 400;
+    color:#EAEAEA;
 }
 
 /* ESTRELLA */
